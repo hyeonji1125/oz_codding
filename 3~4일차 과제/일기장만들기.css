@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    background-color:rgb(217, 242, 251);
+}
+.diary{
+    height: 100%;
+    flex-direction: column;
+    color: rgb(20, 20, 51);
+    margin: 20px;
+}
+.diary-head{
+    border: 3px double rgb(3, 18, 131);
+    text-align: center;
+    
+}
+.day{
+    border: 3px double rgb(3, 18, 131);
+    text-align: end;
+    margin: 20px;
+    
+}
+
+.img{
+    border: 3px double rgb(3, 18, 131);
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+.content{
+    border: 3px double rgb(3, 18, 131);
+    text-align: center;
+    margin: 20px;
+}
+.footer{
+    text-align: center;
+}

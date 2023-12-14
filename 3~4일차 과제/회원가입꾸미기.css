@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+.singup{
+    width: 500px;
+    height: 100%;
+    padding-top: 20px;
+    background-color: antiquewhite;
+    box-shadow: 8px 10px 0px 0px rgba(255,48,48,1),
+    16px 10px 0px 0px rgba(255,234,7,1),
+    24px 10px 0px 0px rgba(0,186,21,1);
+    ;
+}
+h1{
+    margin: 0;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+}
+.input-pone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#name, #id, #pw, #email{
+    width: 310px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+#pone{
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 80px;
+    height: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    font-size: 10px;
+}
+.radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#join, #select{
+    padding: 10px;
+    width: 310px;
+    height: 40px;
+}
+
+
+
+
