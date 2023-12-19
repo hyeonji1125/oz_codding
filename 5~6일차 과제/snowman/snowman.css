@@ -1,0 +1,89 @@
+html{
+    background-color: skyblue;
+}
+body{
+    margin: 0;
+}
+
+.circle1 {
+    width : 100px;
+    height : 100px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+}
+.circle2 {
+    width : 150px;
+    height : 150px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 75px;
+}
+
+.eye{
+    width: 80px;
+    height: 20px;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    top: 25px;
+}
+.eyes{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 5px;
+}
+.nose{
+    border-right: 30px solid orangered;
+    border-bottom: 15px solid transparent; 
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+.mouse{
+    width: 30px;
+    height: 15px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: red;
+    position: absolute;
+    top: 75px;
+    left: 30px;
+}
+
+.chu{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    position: relative;
+    top: 40px;
+    left: 60px;
+    margin: 10px;
+}
+.hand-l{
+    width: 80px;
+    height: 10px;
+    background-color: brown;
+    position: absolute;
+    top: 20px;
+    left: -65px;
+    transform: rotate(30deg);
+}
+.hand-r{
+    width: 80px;
+    height: 10px;
+    background-color: brown;
+    position: absolute;
+    top: 20px;
+    right: -65px;
+    transform: rotate(330deg);
+}
