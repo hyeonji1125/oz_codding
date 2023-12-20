@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>햄버거 바 만들기</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            margin: 0;
+            
+        }
+        .nav_content{
+             
+        }
+        .nav_bar{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            background-color: gray;
+        }
+        .nav_bar ul{
+            display: flex;
+            list-style: none;
+           margin: 0;
+        }
+   
+        .nav_bar ul li{
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: #ffffff;
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .navbar_burger{
+            text-align: center;
+           /*display: none;*/
+        }
+        @media screen and (max-width: 550px) {
+            .navbar_burger{
+                display: block;
+            }
+            .nav_content{
+                display: none;
+            }
+        }
+        .navbar_burger:hover{
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_content">
+            <div class="nav_bar">
+            <ul>
+                <li>홈</li>
+                <li>소개</li>
+                <li>서비스</li>
+                <li>문의</li>
+            </ul>
+            </div>
+        </div>
+    
+    <div class="navbar_burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+      </div>
+    </div>
+</body>
+</html>

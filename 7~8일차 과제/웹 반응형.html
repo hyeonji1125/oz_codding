@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크기에 따른 반응형 웹</title>
+    <style>
+       html, body {
+            box-sizing: border-box;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .one{
+            background-color: skyblue;
+            color: white;
+        }
+        .two{
+            background-color: red;
+            color: white;
+            display: none;
+        }
+        .three{
+            background-color: blueviolet;
+            color: white;
+            display: none;
+        }
+        .four{
+            background-color: yellowgreen;
+            color: white;
+            display: none;
+        }
+        .five{
+            background-color: black;
+            color: white;
+            display: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .two{
+                display: block;
+            }
+            .one{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 820px) {
+            .three{
+                display: block;
+            }
+            .two{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 640px) {
+            .four{
+                display: block;
+            }
+            .three{
+                display: none;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .five{
+                display: block;
+            }
+            .four{
+                display: none;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+        <div class="one">
+            <p>여러 화면 크기로 구경해요!<br>
+            1번</p>
+        </div>
+        <div class="two">
+            <p>여러 화면 크기로 구경해요!<br>2번</p>
+        </div>
+        <div class="three">
+            <p>여러 화면 크기로 구경해요!<br>
+                3번</p>
+        </div>
+        <div class="four">
+           <p>여러 화면 크기로 구경해요!<br>
+            4번</p>
+        </div>
+        <div class="five">
+            <p>여러 화면 크기로 구경해요!<br>
+                5번</p>
+        </div>
+</body>
+</html>
