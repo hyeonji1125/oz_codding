@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change color</title>
+  <style>
+    #whitebtn, #blackbtn {
+      padding: 10px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <button id="whitebtn" onclick="darkMode('white')">white</button>
+  <button id="blackbtn" onclick="darkMode('black')">black</button>
+
+  <script>
+    function darkMode(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>
