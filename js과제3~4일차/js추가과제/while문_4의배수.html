@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>4의 배수 5개씩 출력하기</h1>
+	<div id="five"></div>
+
+	<script>
+	 const five = document.getElementById('five')
+	 let minNum = 100;
+	 const maxNum = 500;
+	 const lineNum = 5;
+
+	 while(minNum <= maxNum){
+		let line = ''
+
+		for(let i = 0; i < lineNum && minNum <= maxNum; i++){
+			line += minNum + ' '; //공백
+			minNum += 4;
+		}
+		five.innerHTML += line +'<br>'
+
+	 }
+
+	</script>
+</body>
+</html>

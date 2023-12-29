@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+	<h1>Mystery Number 맞추기</h1>
+	<h3>1부터 100사이의 숫자를 입력하세요!</h3>
+	<div id="push">
+		<input id="number">
+		<button id="result">뚜둥</button>
+		<p></p>
+		<div id="restart" style="display: none;">
+			<button id="restartBtn">다시하기</button>
+		</div>
+	</div>
+	</div>
+
+	<script>
+	
+	const randomNumber = Math.floor(Math.random() * 100) + 1
+
+	const result = document.getElementById("result")
+	const restart = document.getElementById("restart")
+	const restartBtn = document.getElementById("restartBtn")
+	const p = document.querySelector("p")
+
+	result.addEventListener("click", function(){
+
+		const number = parseInt(document.getElementById("number").value)
+		
+		if(number === randomNumber){
+			alert("정답입니다. 축하드려요!")
+			restart.style.display = "block"
+		}
+		else if(number < randomNumber){
+			p.textContent = "숫자가 작아요! 조금 더 높여보세요!"
+		}
+		else if(number > randomNumber){
+			p.textContent = "숫자가 커요! 조금 줄여 보세요!"
+		}
+	})
+
+	restartBtn.addEventListener("click", function(){
+		location.reload();
+		//현재 페이지를 다시 로드
+	})
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>별 트리 찍기</h1>
+	<div id="one">1번트리<br></div>
+	<div id="two">2번트리<br></div>
+	<div id="three">3번트리<br></div>
+
+	<script>
+		const one = document.getElementById("one")
+		const two = document.getElementById("two")
+		const three = document.getElementById("three")
+
+		const Count = 5;
+
+		for (let i = 1; i <= Count; i++) {
+		let line = '';
+		
+		// 각 줄의 별표(*) 추가
+		for (let j = 1; j <= i; j++) {
+				line += '*';
+		}
+		one.innerHTML += line +'<br>'
+	}
+
+
+
+		for (let i = 1; i <= Count; i++) {
+		let line = '';
+		
+		// 각 줄의 별표(*) 추가
+		for (let j = 1; j <= i; j++) {
+				line += '*';
+		}
+		two.innerHTML += line +'<br>'
+	}
+	for (let i = Count; i >= 1; i--) {
+        let line = '';
+
+        // 각 줄의 별표(*) 추가
+        for (let j = 1; j <= i; j++) {
+            line += '*';
+        }
+
+        // 결과를 출력할 div에 각 줄 추가
+        two.innerHTML += line + '<br>';
+    }
+
+
+
+
+		for (let i = 1; i <= Count; i++) {
+		let line = '';
+		
+		// 각 줄의 별표(*) 추가
+		for (let j = 1; j <= 2*i - 1; j++) {
+				line += '*';
+		}
+		three.innerHTML += line +'<br>'
+	}
+
+	for (let i = Count-1; i >= 1; i--) {
+        let line = '';
+
+        // 각 줄의 별표(*) 추가
+        for (let j = 1; j <= 2*i-1; j++) {
+            line += '*';
+        }
+
+        // 결과를 출력할 div에 각 줄 추가
+        three.innerHTML += line + '<br>';
+    }
+
+
+	</script>
+</body>
+</html>
