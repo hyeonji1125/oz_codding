@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        #stopwatch {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="stopwatch">00:00:00.000</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let timer;
+        let startTime;
+        let running = false;
+
+        function updateStopwatch() {
+            const currentTime = new Date().getTime();
+            const elapsedTime = currentTime - startTime;
+            const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+            const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+            const milliseconds = elapsedTime % 1000;
+
+            document.getElementById('stopwatch').innerText = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}.${milliseconds.toString().padStart(3, '0')}`;
+        }
+
+        function startStopwatch() {
+            if (!running) {
+                startTime = new Date().getTime();
+                timer = setInterval(updateStopwatch, 1);
+                running = true;
+            }
+        }
+
+        function stopStopwatch() {
+            clearInterval(timer);
+            running = false;
+        }
+
+        function resetStopwatch() {
+            stopStopwatch();
+            document.getElementById('stopwatch').innerText = '00:00:00.000';
+        }
+
+        document.getElementById('start').addEventListener('click', startStopwatch);
+        document.getElementById('stop').addEventListener('click', stopStopwatch);
+        document.getElementById('reset').addEventListener('click', resetStopwatch);
+    </script>
+
+</body>
+</html>
