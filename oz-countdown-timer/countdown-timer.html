@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/oz_icon.png" />
+    <title>오즈코딩스쿨 | 카운트다운 타이머</title>
+    <link href="coutdown.css" rel="stylesheet">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body{
+        min-height: 100vh; /**/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 80px 13%;
+        background: #121317;
+      }
+      .footer {
+        position: relative;
+        bottom: 0px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+      }
+      .footer a {
+        color: hsl(282, 100%, 21%);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>2025</h1>
+    <p>new year countdoun</p>
+    <div class="container">
+      <div class="bx">
+        <div id="day" class="counter"></div>
+        <div class="caption"> Days</div> 
+      </div>
+      <div class="bx">
+        <div id="hour" class="counter"></div>
+        <div class="caption">Hours</div>
+      </div>
+      <div class="bx">
+        <div id="minute" class="counter"></div>
+        <div class="caption">minutes</div>
+      </div>
+      <div class="bx">
+        <div id="second" class="counter"></div>
+        <div class="caption">seconds</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © 2023. <a href="https://ozcodingschool.com/" target="_blank">ozcodingschool</a>. All rights
+      reserved. Developed by <a href="#">[김현지]</a>.
+    </div>
+
+    <script>
+      const targetDate = new Date('jan 1, 2025 00:00:00').getTime(); 
+      // 2025년 1월 1일 00시00분00초(밀리초단위)
+
+      function newYear(){
+        const current = new Date().getTime(); //현재시간
+        let difference = targetDate - current;
+        // 현재시간과 올해의 마지막 날짜의 차이를 계산
+        //이 계산 결과 값은 밀리초 단위의 숫자!
+
+        const second = 1000 //1초
+        const minute = second * 60 // 1분을 밀리초 
+        const hour = minute * 60 // 1시간을 밀리초
+        const day = hour * 24 // 1일을 밀리초로 표현
+
+        const d = Math.floor(difference / day)
+        const h = Math.floor(difference % day / hour)
+        const m = Math.floor(difference % hour / minute)
+        const s = Math.floor(difference % minute / second)
+        
+        document.getElementById('day').textContent = d
+        document.getElementById('hour').textContent = h
+        document.getElementById('minute').textContent = m
+        document.getElementById('second').textContent = s
+      }
+
+      setInterval(newYear,1000) //반복 실행 
+     
+    </script>
+  </body>
+</html>
