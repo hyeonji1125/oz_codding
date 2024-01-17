@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>가위바위보 게임</h1>
+	<p>가위 바위 보 중 하나를 입력하세요: </p>
+	<div>
+		<input id="text">
+		<button id="play">결과확인</button>
+		<p id="result"></p>
+	</div>
+
+	<script>
+		const text = document.getElementById("text")
+		const play = document.getElementById("play")
+
+		play.addEventListener("click", function(){
+
+			const userChoice = text.value
+			const computerChoice = f_computerChoice()
+
+			const gameResult = f_gameResult(userChoice,computerChoice)
+
+			const message = `내가 선택한 값 ${userChoice} / 컴퓨터가 선택한 값 ${computerChoice} / 결과 : ${gameResult}`
+			document.getElementById('result').innerHTML = message
+		})
+
+
+		function f_computerChoice(){
+			const game = ['가위', '바위', '보']
+			const random = Math.floor(Math.random() * game.length) 
+			// 0~3미만의 랜덤 수 나오고 소수점제거 -> 0,1,2 의 값이 랜덤으로 나온다
+			return game[random]
+		}
+
+		function f_gameResult(userChoice,computerChoice){
+			if(userChoice === computerChoice)
+			{
+				return "비겼습니다"
+			}
+			else if((userChoice === '가위' && computerChoice === '보') ||
+			(userChoice === '바위' && computerChoice === '가위') ||
+			(userChoice === '보' && computerChoice === '바위')) //사용자가 이기는 조건들
+			{
+				return "이겼습니다"
+			}
+			else{
+				return "졌습니다."
+			}
+		}
+
+
+
+
+	</script>
+</body>
+</html>
